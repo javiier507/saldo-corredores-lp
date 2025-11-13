@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Saldos - Corredores Norte y Sur</title>
+    <style>
+        :root {
+            /* CSS Variables que pueden ser controladas desde Android/Kotlin */
+            --primary-color: #6750A4;
+            --on-primary-color: #FFFFFF;
+            --surface-color: #FFFBFE;
+            --on-surface-color: #1C1B1F;
+            --on-surface-variant-color: #49454F;
+            --outline-color: #79747E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--surface-color);
+            color: var(--on-surface-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon svg {
+            width: 48px;
+            height: 48px;
+            fill: var(--on-primary-color);
+        }
+
+        h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .version {
+            color: var(--on-surface-variant-color);
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+
+        .description {
+            color: var(--on-surface-color);
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            font-size: 22px;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .features {
+            background-color: var(--surface-color);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--outline-color);
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: var(--on-surface-color);
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            background-color: var(--primary-color);
+            color: var(--on-primary-color);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            flex-shrink: 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Tema oscuro automático (fallback si no se inyectan colores desde Android) */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #D0BCFF;
+                --on-primary-color: #381E72;
+                --surface-color: #1C1B1F;
+                --on-surface-color: #E6E1E5;
+                --on-surface-variant-color: #CAC4D0;
+                --outline-color: #938F99;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"/>
+                </svg>
+            </div>
+            <h2>Consulta de Saldos</h2>
+            <div class="version">Versión 1.0</div>
+        </div>
+
+        <p class="description">
+            Consulte y gestione los saldos de las placas de vehículos que utilizan los corredores norte y sur.
+        </p>
+
+        <div class="features">
+            <h3>Características principales</h3>
+            <ul class="feature-list">
+                <li>Registrar múltiples placas con nombres descriptivos</li>
+                <li>Consultar saldos en tiempo real</li>
+                <li>Marcar una cuenta como principal</li>
+                <li>Editar y eliminar cuentas</li>
+                <li>Hacer seguimiento del historial de última actualización</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
