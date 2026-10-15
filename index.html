@@ -13,9 +13,6 @@
             --on-surface-color: #1C1B1F;
             --on-surface-variant-color: #49454F;
             --outline-color: #79747E;
-            /* Aviso de app no oficial: la app no lo sobrescribe, así que es igual en claro y oscuro */
-            --notice-bg: #FFF4CC;
-            --notice-on-color: #5C4400;
         }
 
         * {
@@ -31,8 +28,10 @@
         }
 
         .notice {
-            background-color: var(--notice-bg);
-            color: var(--notice-on-color);
+            background-color: var(--surface-color);
+            background-color: color-mix(in srgb, var(--primary-color) 10%, var(--surface-color));
+            color: var(--on-surface-color);
+            border-bottom: 1px solid var(--outline-color);
             text-align: center;
             padding: 10px 16px;
             font-size: 15px;
@@ -40,7 +39,7 @@
         }
 
         .notice a {
-            color: inherit;
+            color: var(--primary-color);
             font-weight: 500;
             margin-left: 4px;
         }
