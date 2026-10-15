@@ -13,6 +13,9 @@
             --on-surface-color: #1C1B1F;
             --on-surface-variant-color: #49454F;
             --outline-color: #79747E;
+            /* Aviso de app no oficial: la app no lo sobrescribe, así que es igual en claro y oscuro */
+            --notice-bg: #FFF4CC;
+            --notice-on-color: #5C4400;
         }
 
         * {
@@ -25,6 +28,25 @@
             font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background-color: var(--surface-color);
             color: var(--on-surface-color);
+        }
+
+        .notice {
+            background-color: var(--notice-bg);
+            color: var(--notice-on-color);
+            text-align: center;
+            padding: 10px 16px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .notice a {
+            color: inherit;
+            font-weight: 500;
+            margin-left: 4px;
+        }
+
+        .notice .separator {
+            margin: 0 8px;
         }
 
         .container {
@@ -123,6 +145,34 @@
             font-weight: bold;
         }
 
+        .disclaimer {
+            margin-top: 32px;
+            scroll-margin-top: 16px;
+        }
+
+        .disclaimer p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--on-surface-color);
+            margin-bottom: 12px;
+        }
+
+        .disclaimer p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--primary-color);
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: var(--on-surface-variant-color);
+        }
+
         /* Tema oscuro automático (fallback si no se inyectan colores desde Android) */
         @media (prefers-color-scheme: dark) {
             :root {
@@ -151,6 +201,13 @@
     </style>
 </head>
 <body>
+    <div class="notice">
+        Esta aplicación es independiente y no está afiliada a la Empresa Nacional de Autopista (ENA) ni a Panapass.
+        <a href="#renuncia">Ver más</a>
+        <span class="separator">|</span>
+        <a href="privacy.html">Política de Privacidad</a>
+    </div>
+
     <div class="container">
         <div class="hero">
             <div class="icon">
@@ -176,6 +233,26 @@
                 <li>Hacer seguimiento del historial de última actualización</li>
             </ul>
         </div>
+
+        <section id="renuncia" class="features disclaimer">
+            <h3>Renuncia de Responsabilidad y Fuente de Datos</h3>
+            <p>
+                Esta aplicación es un proyecto personal e independiente y no tiene ninguna afiliación, asociación, autorización o respaldo por parte de la Empresa Nacional de Autopista (ENA), de Panapass ni de ninguna otra entidad gubernamental de Panamá.
+            </p>
+            <p>
+                La aplicación "Saldo Corredores" se ha desarrollado con el objetivo de ofrecer una herramienta conveniente para consultar, desde el teléfono y desde Android Auto, el saldo de las placas que utilizan los Corredores Norte y Sur.
+            </p>
+            <p>
+                <strong>Fuente de la Información:</strong> Los saldos mostrados en esta aplicación se obtienen del servicio público de consulta de saldo de ENA. Siempre se recomienda verificar el saldo con la fuente oficial antes de tomar cualquier decisión. La información oficial se puede consultar en: <a href="https://ena.com.pa/pag/revisa-tu-saldo" target="_blank" rel="noopener noreferrer">https://ena.com.pa/pag/revisa-tu-saldo</a>
+            </p>
+            <p>
+                Esta aplicación no realiza recargas ni pagos. El saldo mostrado es el que informa ENA en el momento de la consulta y puede no reflejar movimientos recientes.
+            </p>
+        </section>
+
+        <footer>
+            <a href="privacy.html">Política de Privacidad</a>
+        </footer>
     </div>
 </body>
 </html>

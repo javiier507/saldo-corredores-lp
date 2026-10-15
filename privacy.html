@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Saldo Corredores</title>
+    <style>
+        :root {
+            /* CSS Variables que pueden ser controladas desde Android/Kotlin */
+            --primary-color: #6750A4;
+            --on-primary-color: #FFFFFF;
+            --surface-color: #FFFBFE;
+            --on-surface-color: #1C1B1F;
+            --on-surface-variant-color: #49454F;
+            --outline-color: #79747E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--surface-color);
+            color: var(--on-surface-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .updated {
+            color: var(--on-surface-variant-color);
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .intro {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        section {
+            margin-bottom: 24px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        h4 {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 12px 0 4px 16px;
+        }
+
+        ul {
+            margin-left: 40px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        a {
+            color: var(--primary-color);
+            overflow-wrap: anywhere;
+        }
+
+        .back {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--on-primary-color);
+            border-radius: 999px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        /* Tema oscuro automático (fallback si no se inyectan colores desde Android) */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #D0BCFF;
+                --on-primary-color: #381E72;
+                --surface-color: #1C1B1F;
+                --on-surface-color: #E6E1E5;
+                --on-surface-variant-color: #CAC4D0;
+                --outline-color: #938F99;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            ul {
+                margin-left: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h2>Política de Privacidad para Saldo Corredores</h2>
+        <p class="updated">Última actualización: 14 de octubre de 2026</p>
+        <p class="intro">
+            Esta Política de Privacidad describe cómo Saldo Corredores (en adelante, "la Aplicación") maneja la información del usuario. Tu privacidad es importante para nosotros y estamos comprometidos a protegerla.
+        </p>
+
+        <section>
+            <h3>1. Renuncia de Responsabilidad y Afiliación</h3>
+            <p>
+                Esta aplicación no es una aplicación oficial y no representa a la Empresa Nacional de Autopista (ENA), a Panapass ni a ninguna entidad gubernamental de Panamá. Es un proyecto independiente desarrollado para ofrecer a los usuarios un acceso conveniente al saldo de las placas que utilizan los Corredores Norte y Sur. La información se obtiene del servicio público de consulta de saldo de ENA, pero siempre se recomienda verificarla con la fuente oficial: <a href="https://ena.com.pa/pag/revisa-tu-saldo" target="_blank" rel="noopener noreferrer">https://ena.com.pa/pag/revisa-tu-saldo</a>.
+            </p>
+        </section>
+
+        <section>
+            <h3>2. Información que Recopilamos (y No Recopilamos)</h3>
+
+            <h4>a) Datos que Guardas en la Aplicación (Almacenamiento Local)</h4>
+            <ul>
+                <li>Cuentas: la Aplicación te permite registrar placas de vehículos con un nombre descriptivo, y guarda el último saldo consultado y la fecha de la consulta.</li>
+                <li>Almacenamiento: esta información se guarda exclusivamente en el almacenamiento local de tu dispositivo móvil.</li>
+                <li>Privacidad: no recopilamos ni tenemos acceso a las placas o nombres que guardas. Estos datos no se almacenan en ninguna base de datos o servidor nuestro.</li>
+            </ul>
+
+            <h4>b) Datos que se Envían para Consultar el Saldo</h4>
+            <ul>
+                <li>Para obtener el saldo, la Aplicación envía únicamente el número de placa al servicio de consulta de saldo de ENA, directamente desde tu dispositivo y sin pasar por servidores nuestros.</li>
+                <li>El nombre descriptivo de la cuenta nunca se envía.</li>
+                <li>ENA trata esa consulta de acuerdo con sus propias políticas.</li>
+            </ul>
+
+            <h4>c) Datos que No Recopilamos</h4>
+            <ul>
+                <li>No recopilamos ningún tipo de información de identificación personal como tu nombre, dirección de correo electrónico, número de teléfono o ubicación. No requerimos que crees una cuenta para usar la Aplicación.</li>
+                <li>La Aplicación no incluye herramientas de analítica, publicidad ni seguimiento.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>3. Cómo Usamos tu Información</h3>
+            <ul>
+                <li>Datos guardados localmente: para proveer la funcionalidad principal de la Aplicación, que es mostrarte el saldo de tus placas en el teléfono y en Android Auto.</li>
+                <li>Número de placa: se envía a ENA únicamente para consultar su saldo.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>4. Cómo Compartimos tu Información</h3>
+            <p>
+                No compartimos, vendemos ni alquilamos tus datos personales con terceros. La única información que sale de tu dispositivo es el número de placa enviado a ENA para consultar su saldo.
+            </p>
+        </section>
+
+        <section>
+            <h3>5. Seguridad y Copia de Seguridad de los Datos</h3>
+            <p>
+                Al almacenar tus cuentas directamente en tu dispositivo, la seguridad de esos datos está protegida por las propias medidas de seguridad de tu teléfono. Si tienes activada la copia de seguridad de Android, estos datos pueden incluirse en la copia de seguridad de tu cuenta de Google, gestionada por Google. Al desinstalar la Aplicación, los datos se eliminan de tu dispositivo.
+            </p>
+        </section>
+
+        <section>
+            <h3>6. Enlaces a Sitios de Terceros</h3>
+            <p>
+                La Aplicación puede contener enlaces a sitios web de terceros (como el sitio oficial de ENA) para tu conveniencia. No somos responsables de las prácticas de privacidad ni del contenido de dichos sitios. Te recomendamos leer sus políticas de privacidad.
+            </p>
+        </section>
+
+        <section>
+            <h3>7. Cambios a esta Política de Privacidad</h3>
+            <p>
+                Podemos actualizar nuestra Política de Privacidad ocasionalmente. Te notificaremos de cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de "Última actualización" en la parte superior.
+            </p>
+        </section>
+
+        <section>
+            <h3>8. Contacto</h3>
+            <p>
+                Si tienes alguna pregunta sobre esta Política de Privacidad, puedes contactarnos a través de: <a href="https://fancy-marshmallow-0dfee0.netlify.app/" target="_blank" rel="noopener noreferrer">https://fancy-marshmallow-0dfee0.netlify.app/</a>
+            </p>
+        </section>
+
+        <div class="back">
+            <a href="index.html">← Volver a la página de inicio</a>
+        </div>
+    </main>
+</body>
+</html>
