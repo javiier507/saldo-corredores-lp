@@ -132,7 +132,7 @@
 <body>
     <main class="container">
         <h2>Política de Privacidad para Saldo Corredores</h2>
-        <p class="updated">Última actualización: 14 de octubre de 2026</p>
+        <p class="updated">Última actualización: 16 de octubre de 2026</p>
         <p class="intro">
             Esta Política de Privacidad describe cómo Saldo Corredores (en adelante, "la Aplicación") maneja la información del usuario. Tu privacidad es importante para nosotros y estamos comprometidos a protegerla.
         </p>
@@ -151,19 +151,20 @@
             <ul>
                 <li>Cuentas: la Aplicación te permite registrar placas de vehículos con un nombre descriptivo, y guarda el último saldo consultado y la fecha de la consulta.</li>
                 <li>Almacenamiento: esta información se guarda exclusivamente en el almacenamiento local de tu dispositivo móvil.</li>
-                <li>Privacidad: no recopilamos ni tenemos acceso a las placas o nombres que guardas. Estos datos no se almacenan en ninguna base de datos o servidor nuestro.</li>
+                <li>Privacidad: no tenemos acceso a las cuentas que guardas. Tus cuentas (nombres, placas guardadas, saldos y fechas) no se almacenan en ninguna base de datos nuestra. La placa solo sale de tu dispositivo cuando consultas su saldo, como se explica en el punto b).</li>
             </ul>
 
             <h4>b) Datos que se Envían para Consultar el Saldo</h4>
             <ul>
-                <li>Para obtener el saldo, la Aplicación envía únicamente el número de placa al servicio de consulta de saldo de ENA, directamente desde tu dispositivo y sin pasar por servidores nuestros.</li>
+                <li>Para obtener el saldo, la Aplicación envía únicamente el número de placa, mediante una conexión cifrada (HTTPS), a un servicio intermedio (reverse proxy) operado por nosotros sobre la infraestructura de Cloudflare. Este servicio reenvía la placa al servicio de consulta de saldo de ENA y te devuelve la respuesta.</li>
                 <li>El nombre descriptivo de la cuenta nunca se envía.</li>
+                <li>No usamos la placa para ningún otro fin ni la asociamos a tu identidad. Se procesa únicamente en memoria para reenviarla a ENA: nuestro servicio intermedio no la registra ni la guarda. Como proveedor de red, Cloudflare puede tratar datos técnicos de conexión (como la dirección IP) de acuerdo con su propia política de privacidad.</li>
                 <li>ENA trata esa consulta de acuerdo con sus propias políticas.</li>
             </ul>
 
             <h4>c) Datos que No Recopilamos</h4>
             <ul>
-                <li>No recopilamos ningún tipo de información de identificación personal como tu nombre, dirección de correo electrónico, número de teléfono o ubicación. No requerimos que crees una cuenta para usar la Aplicación.</li>
+                <li>Aparte de la placa que consultas, no recopilamos ningún tipo de información de identificación personal como tu nombre, dirección de correo electrónico, número de teléfono o ubicación. No requerimos que crees una cuenta de usuario para usar la Aplicación.</li>
                 <li>La Aplicación no incluye herramientas de analítica, publicidad ni seguimiento.</li>
             </ul>
         </section>
@@ -172,28 +173,31 @@
             <h3>3. Cómo Usamos tu Información</h3>
             <ul>
                 <li>Datos guardados localmente: para proveer la funcionalidad principal de la Aplicación, que es mostrarte el saldo de tus placas en el teléfono y en Android Auto.</li>
-                <li>Número de placa: se envía a ENA únicamente para consultar su saldo.</li>
+                <li>Número de placa: se envía a nuestro servicio intermedio y de ahí a ENA únicamente para consultar su saldo.</li>
             </ul>
         </section>
 
         <section>
             <h3>4. Cómo Compartimos tu Información</h3>
             <p>
-                No compartimos, vendemos ni alquilamos tus datos personales con terceros. La única información que sale de tu dispositivo es el número de placa enviado a ENA para consultar su saldo.
+                No vendemos ni alquilamos tus datos personales, ni los compartimos con fines publicitarios. Los únicos datos de la Aplicación que salen de tu dispositivo son el número de placa que consultas (además de los datos técnicos de conexión propios de cualquier solicitud de red). La placa llega a dos destinatarios: Cloudflare, proveedor de infraestructura que procesa los datos por cuenta nuestra para operar el servicio intermedio, y ENA, a quien se envía la placa, a petición tuya, para obtener su saldo.
             </p>
         </section>
 
         <section>
             <h3>5. Seguridad y Copia de Seguridad de los Datos</h3>
             <p>
-                Al almacenar tus cuentas directamente en tu dispositivo, la seguridad de esos datos está protegida por las propias medidas de seguridad de tu teléfono. Si tienes activada la copia de seguridad de Android, estos datos pueden incluirse en la copia de seguridad de tu cuenta de Google, gestionada por Google. Al desinstalar la Aplicación, los datos se eliminan de tu dispositivo.
+                La placa viaja siempre mediante una conexión cifrada (HTTPS). Al almacenar tus cuentas directamente en tu dispositivo, la seguridad de esos datos está protegida por las propias medidas de seguridad de tu teléfono. Si tienes activada la copia de seguridad de Android, estos datos pueden incluirse en la copia de seguridad de tu cuenta de Google, gestionada por Google. Al desinstalar la Aplicación, los datos se eliminan de tu dispositivo.
+            </p>
+            <p>
+                Conservación y eliminación: puedes eliminar una cuenta desde la Aplicación en cualquier momento, y sus datos se borran de tu dispositivo. En nuestro servicio intermedio no guardamos ningún dato.
             </p>
         </section>
 
         <section>
             <h3>6. Enlaces a Sitios de Terceros</h3>
             <p>
-                La Aplicación puede contener enlaces a sitios web de terceros (como el sitio oficial de ENA) para tu conveniencia. No somos responsables de las prácticas de privacidad ni del contenido de dichos sitios. Te recomendamos leer sus políticas de privacidad.
+                La Aplicación puede contener enlaces a sitios web de terceros (como el sitio oficial de ENA) para tu conveniencia. No somos responsables de las prácticas de privacidad ni del contenido de dichos sitios. Te recomendamos leer sus políticas de privacidad, así como la de Cloudflare, que aloja nuestro servicio intermedio: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">https://www.cloudflare.com/privacypolicy/</a>.
             </p>
         </section>
 
